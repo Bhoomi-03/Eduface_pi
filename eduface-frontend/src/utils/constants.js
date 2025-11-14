@@ -1,7 +1,7 @@
 // API Configuration
-export const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-// Role Constants
+// Roles
 export const ROLES = {
   ADMIN: 'admin',
   FACULTY: 'faculty',
@@ -16,6 +16,18 @@ export const STORAGE_KEYS = {
   USER_NAME: 'eduface_user_name',
 };
 
+// Theme Colors
+export const THEME_COLORS = {
+  PRIMARY: '#2E3B55',
+  SECONDARY: '#4CAF50',
+  SUCCESS: '#4CAF50',
+  ERROR: '#f44336',
+  WARNING: '#ff9800',
+  INFO: '#2196f3',
+  BACKGROUND: '#f5f5f5',
+  SURFACE: '#ffffff',
+};
+
 // API Endpoints
 export const API_ENDPOINTS = {
   AUTH: {
@@ -26,16 +38,4 @@ export const API_ENDPOINTS = {
   ATTENDANCE: '/attendance',
   DOOR: '/door/open',
   ALERTS: '/alerts',
-};
-
-// Theme Colors
-export const THEME_COLORS = {
-  PRIMARY: '#2E3B55', // Navy Blue
-  SECONDARY: '#4CAF50', // Green
-  SUCCESS: '#4CAF50',
-  ERROR: '#f44336',
-  WARNING: '#ff9800',
-  INFO: '#2196f3',
-  BACKGROUND: '#f5f5f5',
-  SURFACE: '#ffffff',
 };
